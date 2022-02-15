@@ -1,0 +1,25 @@
+﻿@model CategoryVM
+@{
+    ViewBag.Title = "CategoryList";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>@Html.LabelFor(x=>x.Category.CategoryID)</th>
+            <th>@Html.LabelFor(x=>x.Category.CategoryName)</th>
+            <th>@Html.LabelFor(x=>x.Category.Description)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category item in Model.Categories)
+        {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.Description</td>
+        </tr>
+
+        }
+    </tbody>
+</table>

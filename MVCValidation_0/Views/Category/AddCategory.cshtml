@@ -1,0 +1,31 @@
+﻿@model CategoryVM
+
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+<style>
+
+    .field-validation-error{
+        color:red;
+    }
+
+</style>
+
+
+@using(Html.BeginForm())
+            {
+                <div>
+                    @Html.TextBoxFor(x=>x.Category.CategoryName) <br />
+                    @Html.ValidationMessageFor(x=>x.Category.CategoryName)
+                </div>
+                <br /> <br />
+                <div>
+                    @Html.TextBoxFor(x=>x.Category.Description) <br />
+                    @Html.ValidationMessageFor(x=>x.Category.Description)
+                </div>
+                <div>
+                    <button>Ekle</button>
+                </div>
+            }
+
